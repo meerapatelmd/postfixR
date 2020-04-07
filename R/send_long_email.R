@@ -13,7 +13,7 @@ send_long_email <-
 
         ##Wrting vector to tempfile
         temp_txt_fn <- tempfile(fileext = ".txt")
-        readr::write_lines(vector, file = temp_txt_fn)
+        readr::write_lines(vector, path = temp_txt_fn)
 
         ##Sending email
         command <- paste0("mail -s '", subject, "' ", to, " < ", temp_txt_fn)
@@ -23,4 +23,6 @@ send_long_email <-
         } else {
             mirCat::typewrite("\tEmail", crayon::italic(subject), "in queue to", crayon::italic(to), ".\n")
         }
+
+        unlink(temp_txt_fn)
     }
