@@ -2,5 +2,6 @@
 
 export(check_mailq)
 export(send_email)
+export(send_long_email)
 importFrom(crayon,italic)
 importFrom(mirCat,typewrite)
