@@ -2,7 +2,8 @@
 #' @param to email address of the recipient
 #' @param subject subject of email
 #' @param vector vector to compose body of the email
-#' @importFrom mirCat typewrite
+#' @importFrom magrittr %>%
+#' @importFrom secretary typewrite
 #' @importFrom crayon italic
 #' @export
 
@@ -21,7 +22,7 @@ send_long_email <-
         if (length(return_msg) > 0) {
             print(return_msg)
         } else {
-            mirCat::typewrite("\tEmail", crayon::italic(subject), "in queue to", crayon::italic(to), ".\n")
+            secretary::typewrite("\tEmail", crayon::italic(subject), "in queue to", crayon::italic(to), ".\n")
         }
 
         unlink(temp_txt_fn)
