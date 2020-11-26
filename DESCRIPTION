@@ -10,3 +10,5 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
+Imports:     crayon,    mirCatURL: https://meerapatelmd.github.io/postfixR/, https://github.com/meerapatelmd/postfixR/BugReports: https://github.com/meerapatelmd/postfixR/issues/
+
